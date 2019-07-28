@@ -1,0 +1,15 @@
+*, html, body {
+   height: 100%;
+   margin: 0;
+   background-color: rgba(43, 149, 179, 0.86);
+}
+
+h1 {
+   font-family: Consolas;
+   font-size: 5rem;
+}
+
+p {
+   font-family: Sans Serif, cursive;
+   font-size: 3.1rem;
+}
