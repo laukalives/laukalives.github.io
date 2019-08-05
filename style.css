@@ -1,169 +1,180 @@
 :root {
-   --blue: #202062;
-   --yellow: #f2eb86;
-   --grey: #333333;
-   --red: #5C0007;
-   --rose: #953734;
+  --blue: #202062;
+  --yellow: #f2eb86;
+  --grey: #333333;
+  --red: #5C0007;
+  --rose: #953734;
 }
 
 html {
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 html, body {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-   box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
-   font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 h1 {
-   font-size: 2.1em;
-   padding: 0.25em !important;
-   margin: 2.7em !important;
-   justify-content: center;
-   background-color: rgba(0, 0, 0, 0.65);
-   line-height: 145%;
-   letter-spacing: 0.1em;
-   border-radius: 30px;
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+  line-height: 115%;
+  letter-spacing: 0.1em;
 }
 
 p {
-   font-size: 1.7em;
-   padding: 0.25em !important;
-   margin: 2.7em !important;
-   justify-content: center;
-   border-radius: 30px;
-   background-color: rgba(0, 0, 0, 0.65);
+  font-size: 1.7em;
 }
 
 .button {
-   text-decoration: none;
-   font-weight: 10;
-   font-size: 3rem;
-   padding: 10px;
-   font-family: Consolas;
-   color: var(--rose);
-   border-radius: 10px;
-   border: 0.1rem solid var(--yellow);
-   background-color: rgba(0, 0, 0, 0.65);
+  text-decoration: none;
+  font-weight: 10;
+  font-size: 3rem;
+  padding: 6px;
+  font-family: Consolas;
+  color: var(--rose);
+  border-radius: 10px;
+  border: 0.1rem solid var(--yellow);
+  background-color: rgba(0, 0, 0, 0.76);
 }
 
-.content {
-   background: url(164275982-fantasy-art-wallpapers.jpg);
-   background-color: #333333;
-   background-size: contain;
-   background-repeat: no-repeat;
-   text-align: center;
-   color: var(--yellow);
-   display: grid;
-   grid-gap: 10px;
-   grid-template-columns: 1fr 200px 200px 200px 200px 1fr;
-   grid-template-rows: 50px 1fr 1fr 50px;
-   grid-template-areas:
-      "h h h h h h"
-      "m m m m m m"
-      "a a a a a a"
-      "f f f f f f";
-   min-height: 100vh;
-   min-width: 430px;
-}
-
-.header ul {
-   list-style-type: none;
-   display: flex;
-   justify-content: space-around;
+.wrapper {
+  background: url(164275982-fantasy-art-wallpapers.jpg);
+  background-color: #333333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: var(--yellow);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+  grid-template-rows: 60px auto 1fr 50px;
+  grid-template-areas:
+    "h  h h  h h"
+    "f1 m m  m f2"
+    "t1 . t2 . t3"
+    "f  f f  f f";
+  min-height: 100vh;
+  min-width: 430px;
 }
 
 .header {
-   grid-area: h;
-   text-align: center;
-   background-color: var(--grey);
-   /* position: fixed; */
-   position: -webkit-sticky;
-   position: sticky;
-   top: 0;
-   width: 100%;
+  grid-area: h;
+  text-align: center;
+  background-color: var(--grey);
+  border: 1px solid black;
+  /* position: fixed; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 .header a {
-   color: var(--yellow);
-   font-size: 1.7rem;
+  color: var(--yellow);
+  font-size: 1.7rem;
 }
 
 .main {
-   grid-area: m;
-   /* background-color: rgba(0, 0, 0, 0.39); */
+  grid-area: m;
 }
 
-.about {
-   grid-area: a;
-   display: grid;
-   grid-gap: 10px;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 1fr);
-   grid-template-areas:
-      "f1 . f2"
-      ". s ."
-      "t1 . t2";
+.main img {
+  padding-top: 40px;
+  padding-bottom: 15px;
 }
 
-.about img {
-   height: auto;
-   width: auto;
-   justify-content: center;
+.panel {
+  background-color: rgba(0, 0, 0, 0.76);
+  padding: 8px 5px 15px 5px;
+  margin-top: 15px;
 }
 
 .feat1 {
-   grid-area: f1;
+  grid-area: f1;
+}
+
+.feat1 ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 .feat2 {
-   grid-area: f2;
+  grid-area: f2;
+}
+
+.feat2 ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  grid-area: b;
 }
 
 .test1 {
-   grid-area: t1;
+  grid-area: t1;
+}
+
+.test1 p {
+   font-size: 1.3em;
+   background-color: rgba(0, 0, 0, 0.57)
 }
 
 .test2 {
-   grid-area: t2;
+  grid-area: t2;
 }
 
-.symbol {
-   grid-area: s;
+.test2 p {
+   font-size: 1.3em;
+   background-color: rgba(0, 0, 0, 0.57)
+}
+
+.test3 {
+  grid-area: t3;
+}
+
+.test3 p {
+   font-size: 1.3em;
+   background-color: rgba(0, 0, 0, 0.57)
 }
 
 .footer {
-   grid-area: f;
-   text-align: center;
-   background-color: var(--grey);
-   color: var(--yellow);
-   text-align: center;
+  grid-area: f;
+  text-align: center;
+  background-color: var(--grey);
+  color: var(--yellow);
+  text-align: center;
 }
 
 .footer ul {
-   list-style: none;
-   display: flex;
-   justify-content: space-around;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer a {
-   color: var(--yellow);
-   font-size: 1.2rem;
+  color: var(--yellow);
+  font-size: 1.2rem;
 }
 
 .footer li {
-   font-size: .75rem;
+  font-size: .75rem;
 }
