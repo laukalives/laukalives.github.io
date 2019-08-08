@@ -1,2 +1,2 @@
 # laukalives.github.io
-Skill calculator for Asteria
+Demo site for the redesign of Asteria MUD's homepage
